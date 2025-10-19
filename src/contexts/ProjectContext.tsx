@@ -47,7 +47,7 @@ export function ProjectProvider({ children }: { children: React.ReactNode }) {
     if (savedProjects) {
       try {
         const parsed = JSON.parse(savedProjects)
-        setProjects(parsed.map((p: any) => ({
+        setProjects(parsed.map((p: Project) => ({
           ...p,
           createdAt: new Date(p.createdAt),
           updatedAt: new Date(p.updatedAt)

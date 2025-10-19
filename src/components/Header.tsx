@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { useTheme } from '@/contexts/ThemeContext'
 import { useProject } from '@/contexts/ProjectContext'
-import { Sun, Moon, Save, FolderPlus, Play, Settings } from 'lucide-react'
+import { Sun, Moon, Save, FolderPlus, Play } from 'lucide-react'
 
 export function Header() {
   const { theme, toggleTheme } = useTheme()
