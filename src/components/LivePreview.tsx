@@ -36,8 +36,6 @@ export function LivePreview() {
     return jsFiles[0] || 'src/App.js'
   }
 
-  const mainFile = getMainFile()
-
   const getPackageJson = () => {
     if (files['package.json']) {
       try {
