@@ -20,21 +20,6 @@ export function LivePreview() {
     }
   }, [currentProject, getProjectFiles])
 
-  const getMainFile = () => {
-    // Look for main entry points in order of preference
-    if (files['src/index.js']) return 'src/index.js'
-    if (files['src/index.tsx']) return 'src/index.tsx'
-    if (files['src/App.js']) return 'src/App.js'
-    if (files['src/App.tsx']) return 'src/App.tsx'
-    if (files['index.js']) return 'index.js'
-    if (files['index.tsx']) return 'index.tsx'
-    
-    // Return the first JS/JSX file found
-    const jsFiles = Object.keys(files).filter(key => 
-      key.endsWith('.js') || key.endsWith('.jsx') || key.endsWith('.ts') || key.endsWith('.tsx')
-    )
-    return jsFiles[0] || 'src/App.js'
-  }
 
   const getPackageJson = () => {
     if (files['package.json']) {
@@ -166,7 +151,6 @@ export function LivePreview() {
               showRefreshButton: false,
               showConsole: false,
               showConsoleButton: false,
-              showUndoRedoButtons: false,
               showRunButton: false,
               showErrorScreen: true,
               wrapContent: true,
