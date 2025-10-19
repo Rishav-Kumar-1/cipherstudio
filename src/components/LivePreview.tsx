@@ -151,7 +151,6 @@ export function LivePreview() {
               showRefreshButton: false,
               showConsole: false,
               showConsoleButton: false,
-              showRunButton: false,
               showErrorScreen: true,
               wrapContent: true,
               editorHeight: '100%',
