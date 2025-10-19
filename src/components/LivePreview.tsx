@@ -113,7 +113,6 @@ export function LivePreview() {
     )
   }
 
-  const mainFile = getMainFile()
   const packageJson = getPackageJson()
   const indexHtml = getIndexHtml()
 
@@ -165,7 +164,6 @@ export function LivePreview() {
               showLineNumbers: false,
               showNavigator: false,
               showRefreshButton: false,
-              showOpenInCodeSandbox: false,
               showConsole: false,
               showConsoleButton: false,
               showUndoRedoButtons: false,
